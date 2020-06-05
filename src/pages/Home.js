@@ -1,11 +1,8 @@
 import React from 'react';
+import Hero from '../components/Hero';
 
-function Home() {
-    return (
-        <div>
-            hello from home
-        </div>
-    );
+export default function Home(){
+    return <div>
+    <Hero />;
+    </div>
 }
-
-export default Home;
