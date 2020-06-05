@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class extends Component {
+export default class SingleRooms extends Component {
     render() {
         return (
             <div>

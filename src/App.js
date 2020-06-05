@@ -8,7 +8,10 @@ import SingleRooms from "./pages/SingleRooms"
 function App() {
   return (
     <> 
-     hello 
+     <Home />
+     <Error />
+     <Rooms/>
+     <SingleRooms/>
     </>
   );
 }
