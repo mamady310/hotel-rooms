@@ -12,22 +12,22 @@ export default class Services extends Component {
             {
             icon:<FaLuggageCart />,
             title:"Luggage Forwarding",
-            info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",   
+            info:"This services inlcudes packing and unpacking for guests to save you time and worries. We ensure that your things arrive safely.",   
             },
             {
             icon:<GiFruitBowl />,
             title:"Meals Anytime",
-            info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",   
+            info:"Great gourmet made to order anytime of the day anywhere on the hotel property. We even have all day breakfast!",   
              },
              {
             icon:<AiFillCar />,
             title:"Chauffer Check-In",
-            info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",   
+            info:"We can have a driver pick you up at the airport and begin the checkin process in the car. Once you reac the hotel you just head straight to you room!",   
              },
              {
             icon:<TiCamera />,
             title:"Sight Seeing",
-            info:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",   
+            info:"Want to get out and see all the great things your destination has to offer? We have plenty of tours that we can arrange for you, just ask!",   
              }
         ]
     }
@@ -36,7 +36,6 @@ export default class Services extends Component {
             <section className="services">
               <Title title="services" />
              <div className="services-center"> 
-             </div>
              {this.state.services.map((item, index) => {
                  return <article key={index} className="service">
                     <span>{item.icon}</span>
@@ -44,6 +43,7 @@ export default class Services extends Component {
                      <p>{item.info}</p>
                  </article>
              })}
+             </div>
             </section>
         )
     }
