@@ -5,12 +5,15 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router} from 'react-router-dom';
+import { RoomProvider } from "./context";
 
 
 ReactDOM.render(
+  <RoomProvider>
   <Router>
     <App />
-  </Router>,
+  </Router>
+  </RoomProvider>,
   document.getElementById('root')
 );
 
