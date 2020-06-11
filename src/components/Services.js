@@ -10,7 +10,7 @@ export default class Services extends Component {
     state = {
         services: [
             {
-            icon:<FaLuggageCart />,
+            icon:<FaLuggageCart />, 
             title:"Luggage Forwarding",
             info:"This services inlcudes packing and unpacking for guests to save you time and worries. We ensure that your things arrive safely.",   
             },
