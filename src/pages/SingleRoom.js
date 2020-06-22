@@ -34,15 +34,16 @@ export default class SingleRoom extends Component {
             </div>
             );
         }
-        const {name,
-            description, 
-            capacity, 
-            size,
-            price, 
-            extras, 
-            breafast, 
-            pets, 
-            images} = room
+        const {name} = room
+        // const {name,
+        //     description, 
+        //     capacity, 
+        //     size,
+        //     price, 
+        //     extras, 
+        //     breafast, 
+        //     pets, 
+        //     images} = room
         return (
             <div>
           <Hero hero='roomsHero'>
