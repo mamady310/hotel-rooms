@@ -46,7 +46,7 @@ export default class SingleRoom extends Component {
             pets, 
             images} = room
         return (
-            <div>
+            <>
           <StyledHero img={images[0] || this.defaultBcg}>
          <Banner title={`${name} room`}>
              <Link to='/rooms' className='btn-primary'>
@@ -54,7 +54,7 @@ export default class SingleRoom extends Component {
              </Link>
         </Banner>
         </StyledHero>
-        </div>
+        </>
         );
         
     }
