@@ -1,11 +1,14 @@
 import styled from "styled-components";
+import defaultImg from "../images/room-1.jpeg";
 
-const violet = '##EE82EE';
+// in background url added ternary operator in case the image I want doesn't load so that the false statement will show the default image
 
-const StyledButton = styled.button`
-color: black;
-background: ${violet};
-font-size: 3rem;
-`;
+const StyledHero = styled.header`
+min-height: 60vh;
+background: url(${props => props.img? props.img:defaultImg}) center/cover no-repeat;
+display: flex;
+align-items: center;
+justify-content: center;
+`
 
-export default StyledButton;
+export default StyledHero;
