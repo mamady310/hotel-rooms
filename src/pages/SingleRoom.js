@@ -25,7 +25,7 @@ export default class SingleRoom extends Component {
 
         const {getRoom} = this.context;
         const room = getRoom(this.state.slug);
-        console.log(room);
+        // console.log(room);
 
         if(!room) {
             return (
@@ -45,6 +45,12 @@ export default class SingleRoom extends Component {
             breafast, 
             pets, 
             images} = room
+
+        
+        //can use the rest operator to only show 3 out of the 4 images of each featured room mapping over the new variable defaultImgs.map
+        const [mainImg,...defaultImgs] = images;
+        console.log(defaultImgs);
+
         return (
             <>
           <StyledHero img={images[0] || this.defaultBcg}>
@@ -54,6 +60,13 @@ export default class SingleRoom extends Component {
              </Link>
         </Banner>
         </StyledHero>
+           <section className="single-room" >
+               <div className="single-room-images">
+                   {images.map((item, index) =>{
+                      return <img key={index} src={item} alt={name}/>
+                   } )}
+              </div> 
+           </section>
         </>
         );
         
