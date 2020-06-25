@@ -5,6 +5,7 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from '../context';   
 import StyledHero from "../components/StyledHero";
+import Error from "../pages/Error";
 
 export default class SingleRoom extends Component {
     constructor (props){
@@ -29,10 +30,20 @@ export default class SingleRoom extends Component {
 
         if(!room) {
             return (
-            <div className="error">
-                <h3>Not Found</h3>
-                <Link to="/rooms" className="btn-primary">Rooms</Link>
-            </div>
+            
+            // <div className="error">
+            //     <h3>Not Found</h3>
+            //     <Link to="/rooms" className="btn-primary">Rooms</Link>
+            // </div>
+
+                <Hero hero="roomsHero">
+                <Banner title="404" subtitle="Page Not found">
+                <Link to='/rooms' className='btn-primary'>
+                    RETURN TO Rooms
+                </Link>
+                </Banner>
+                </Hero>
+        
             );
         }
         // const {name} = room
