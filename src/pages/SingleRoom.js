@@ -5,7 +5,7 @@ import Banner from "../components/Banner";
 import { Link } from "react-router-dom";
 import { RoomContext } from '../context';   
 import StyledHero from "../components/StyledHero";
-import Error from "../pages/Error";
+
 
 export default class SingleRoom extends Component {
     constructor (props){
@@ -28,6 +28,7 @@ export default class SingleRoom extends Component {
         const room = getRoom(this.state.slug);
         // console.log(room);
 
+        //handles page not found error when /rooms/(slug) doesn't match what is in data
         if(!room) {
             return (
             
@@ -77,6 +78,22 @@ export default class SingleRoom extends Component {
                       return <img key={index} src={item} alt={name}/>
                    } )}
               </div> 
+              <div className="single-room-info">
+                  <article classname="desc">
+                      <h3>Details</h3>
+                        <p>{description}</p>
+                           <article className="info">
+                            <h3>info</h3>
+                            <h6>price: ${price}</h6>
+                            <h6>size: {size} SQFT </h6>
+                            <h6>
+                                max capacity: {
+                                    capacity > 1? `${capacity} people` : `${capacity} person`
+                                }
+                            </h6>
+                            </article> 
+                  </article>
+              </div>
            </section>
         </>
         );
