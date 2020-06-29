@@ -47,14 +47,14 @@ export default class SingleRoom extends Component {
         
             );
         }
-        // const {name} = room
+   
         const {name,
             description, 
             capacity, 
             size,
             price, 
             extras, 
-            breafast, 
+            breakfast, 
             pets, 
             images} = room
 
@@ -91,9 +91,25 @@ export default class SingleRoom extends Component {
                                     capacity > 1? `${capacity} people` : `${capacity} person`
                                 }
                             </h6>
+                            <h6>
+                            { pets? "Pets allowed" : "No pets allowed"}
+                            </h6>
+                            <h6>
+                              {breakfast && "Free breakfast included"}  
+                            </h6>
                             </article> 
                   </article>
               </div>
+           </section>
+           <section className="room-extras">
+                 <h6>Extras</h6>
+                <ul className="extras">
+                    {extras.map((item, index) => {
+                        return <li key={index}>
+                            - {item}
+                        </li>
+                    })}
+                </ul>
            </section>
         </>
         );
