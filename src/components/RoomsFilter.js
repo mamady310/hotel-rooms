@@ -4,7 +4,7 @@ import { RoomContext} from '../context';
 import Title from '../components/Title';
 
 //get unique values for options dropdown so that each room type is only rendered once
-const getUnique = (item, value) =>{
+const getUnique = (item, value) => {
     return [...new Set(item.map(item => item[value]))]
 }
 
@@ -31,18 +31,30 @@ export default function RoomsFilter({rooms}) {
     types = types.map((item, index) => {
         return <option value={item} key={index}>{item}</option>
     })
+    let people = getUnique(rooms, 'capacity');
+    people = people.map((item, index) => {
+        return <option key={index} value={item}>{item}</option>
+    })
     return (
         <section className="filter-container">
        <Title title="Search Rooms" />
        <form className="filter-form">
         {/* {slect type} */}
         <div className="form-group">
-            <label htmlFor="">room type</label>
+            <label htmlFor="type">room type</label>
             <select name="type" id="type" value={type} className="form-control" onChange={handleChange}>
                {types}
             </select>
         </div>
         {/* {end select type} */}
+         {/* guests */}
+         <div className="form-group">
+            <label htmlFor="capacity">guests</label>
+            <select name="capacity" id="capacity" value={capacity} className="form-control" onChange={handleChange}>
+               {people}
+            </select>
+        </div>
+        {/* {end guests} */}
         </form>    
         </section>
     )
