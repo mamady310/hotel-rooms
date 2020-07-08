@@ -39,14 +39,14 @@ export default function RoomsFilter({rooms}) {
         <section className="filter-container">
        <Title title="Search Rooms" />
        <form className="filter-form">
-        {/* {slect type} */}
+        {/* slect type */}
         <div className="form-group">
             <label htmlFor="type">room type</label>
             <select name="type" id="type" value={type} className="form-control" onChange={handleChange}>
                {types}
             </select>
         </div>
-        {/* {end select type} */}
+        {/* end select type */}
          {/* guests */}
          <div className="form-group">
             <label htmlFor="capacity">guests</label>
@@ -55,6 +55,14 @@ export default function RoomsFilter({rooms}) {
             </select>
         </div>
         {/* {end guests} */}
+        {/* room price*/}
+        <div className="form-goup">
+        <label htmlFor="price">
+        room price ${price}
+        </label>
+        <input type="range" name="price" min={minPrice} max={maxPrice} id="price" value={price} onChange={handleChange}className="form-control"/>
+        </div>
+        {/* end room price */}
         </form>    
         </section>
     )

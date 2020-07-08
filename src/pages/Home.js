@@ -11,7 +11,7 @@ export default function Home(){
     return ( 
     <>
         <Hero>
-            <Banner title="Lavish Rooms" subtitle="Starting at $299">
+            <Banner title="Lavish Rooms" subtitle="Starting at $100">
                 <Link to='/rooms' className="btn-primary">
                     Rooms
                 </Link>
