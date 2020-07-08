@@ -73,7 +73,7 @@ class RoomProvider extends Component {
             capacity,
             price,
             minSize,
-            maxsize,
+            maxSize,
             breakfast,
             pets
         } = this.state
@@ -90,6 +90,14 @@ class RoomProvider extends Component {
     if (type !== 'all') {
         tempRooms = tempRooms.filter(room => room.type === type);
     }
+    // filter by price 
+    tempRooms = tempRooms.filter(room => room.price <= price);
+
+    //filter by room size
+    tempRooms = tempRooms.filter(room => 
+    room.size >= minSize && room.size <= maxSize)
+
+    //change state
     this.setState({
         sortedRooms: tempRooms
     })
