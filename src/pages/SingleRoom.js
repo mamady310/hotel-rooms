@@ -60,8 +60,8 @@ export default class SingleRoom extends Component {
 
         
         //can use the rest operator to only show 3 out of the 4 images of each featured room mapping over the new variable defaultImgs.map
-        const [mainImg,...defaultImgs] = images;
-        console.log(defaultImgs);
+        // const [mainImg,...defaultImgs] = images;
+        // console.log(defaultImgs);
 
         return (
             <>
