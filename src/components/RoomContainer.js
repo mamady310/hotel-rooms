@@ -10,11 +10,10 @@ if(loading) {
     return <Loading />;
 }
 return (
-    <div>
-        hello from rooms container
+    <>
         <RoomsFilter rooms={rooms} />
         <RoomsList rooms={sortedRooms}/>
-    </div>
+    </>
     );
 }
 
